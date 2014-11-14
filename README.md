@@ -1,4 +1,4 @@
-safePDF
+SafePDF
 =======
 
 Makes untrusted PDF files safe!
