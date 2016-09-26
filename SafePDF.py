@@ -12,9 +12,6 @@ November 13, 2014
 Dependencies:
 Wand (http://wand-py.org)
 PyPDF2 (https://github.com/mstamy2/PyPDF2)
-
-Including the original document text as an atachment requires:
-https://github.com/moshekaplan/PyPDF2/tree/patch-1
 """
 
 # Built in modules
@@ -43,8 +40,7 @@ def make_safe(src_fname, dest_fname):
         dest_pdf.append(StringIO.StringIO(page))
 
     # Extract text and merge into one large string:
-    # Note: This functionality requires a modified version of PyPDF2 available
-    # from https://github.com/moshekaplan/PyPDF2/tree/patch-1
+    # Note: This functionality requires an updated version of PyPDF2
     if hasattr(dest_pdf.output, 'addAttachment'):
         texts = []
         pdf = PyPDF2.PdfFileReader(StringIO.StringIO(src_pdf_blob))
